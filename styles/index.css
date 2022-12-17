@@ -159,7 +159,7 @@
 
 .hero::before{
     content: '';
-    max-width: 1920px;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.35);
@@ -191,7 +191,7 @@
 
 @media screen and (max-width: 768px) {
     .hero {
-        max-width: 720px;
+        max-width: 768px;
         min-height: 576px;
     }
 }
@@ -202,6 +202,7 @@
         min-height: 240px;
     }
 }
+
 
 
 .hero__content{
@@ -251,7 +252,13 @@
 
 
 .frame8__maid{
-    width: 100%;
+    max-width: 334.85px;
+}
+
+@media screen and (max-width: 568px) {
+    .frame8__maid{
+        max-width: 134px;
+    }
 }
 
 
