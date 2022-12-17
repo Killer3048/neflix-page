@@ -39,13 +39,14 @@
 }
 
 .header__frame{
-    max-width: 1758px;
+    max-width: 91.563%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-self: center;
     margin: 0 auto;
 }
+
 
 .header__frame-logo{
     max-width: 399px;
