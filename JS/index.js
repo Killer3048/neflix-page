@@ -1,15 +1,19 @@
-document.querySelector('header__links').addEventListener('click', function() {
-    const elementOne = document.getElementById('TV_Shows');
-    const elementTwo = document.getElementById('Movies');
-    const elementTree = document.getElementById('My_List')
+document.getElementById("TV_Shows").onclick = function() {
+    document.getElementById("TV_Shows").classList.toggle("header__links_is-active")
+    document.getElementById("Movies").classList.remove("header__links_is-active")
+    document.getElementById("My_List").classList.remove("header__links_is-active")
 
-    if (elementOne.classList.contains("header__links")) {
-        elementOne.classList.remove("header__links");
-        elementTwo.classList.add("header__links_is-active");
-        elementTree.classList.remove("header__links")
 
-    } else {
-        elementOne.classList.add("hidden");
-        elementTwo.classList.remove("hidden");
-    }
-})
+}
+
+document.getElementById("Movies").onclick = function() {
+    document.getElementById("Movies").classList.toggle("header__links_is-active")
+    document.getElementById("TV_Shows").classList.remove("header__links_is-active")
+    document.getElementById("My_List").classList.remove("header__links_is-active")
+}
+
+document.getElementById("My_List").onclick = function() {
+    document.getElementById("My_List").classList.toggle("header__links_is-active")
+    document.getElementById("TV_Shows").classList.remove("header__links_is-active")
+    document.getElementById("Movies").classList.remove("header__links_is-active")
+}

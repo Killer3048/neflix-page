@@ -583,8 +583,15 @@
     ;
 }
 
+.card{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
 .card__component {
     max-width: 229px;
+
 }
 
 .card__image {
