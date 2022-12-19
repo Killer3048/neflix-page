@@ -474,10 +474,22 @@
     margin: 0;
 }
 
+@media screen and (max-width: 586px) {
+    .cards {
+        gap: 6px;}
+}
+
+
 .cards__component {
     position: relative;
     min-width: 311px;
     max-height: 175px;
+}
+
+@media screen and (max-width: 586px) {
+    .cards__component {
+        min-width: 80px;
+        max-height: 175px;}
 }
 
 .cards__image {
@@ -492,6 +504,15 @@
     z-index: 3;
 }
 
+
+@media screen and (max-width: 569px) {
+    .cards__progress-line{
+        height: 2px;
+        bottom: 4px;
+    }
+}
+
+
 .cards__progress-bar{
     position: absolute;
     bottom: 0;
@@ -500,6 +521,12 @@
     height: 4px;
     background: rgba(229, 9, 20, 0.55);
     z-index: 4;
+}
+
+@media screen and (max-width: 569px) {
+    .cards__progress-bar{
+        height: 2px;
+    }
 }
 
 .see-again__left-next {
