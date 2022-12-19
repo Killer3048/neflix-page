@@ -44,7 +44,7 @@
     max-width: 100%;
     min-height: 56px;
     display: flex;
-    z-index: 2;
+    z-index: 5;
 }
 
 .header__frame {
