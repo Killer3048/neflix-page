@@ -16,6 +16,13 @@
     overflow: overlay
 }
 
+.btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: auto;
+}
+
 .page {
     overflow-y: overlay;
     position: relative;
@@ -114,6 +121,10 @@
     text-decoration: none;
 }
 
+.header__links_is-active {
+    color: #E50914BF
+}
+
 @media screen and (max-width: 535px) {
     .header__links {
         font-size: 8px;
@@ -147,6 +158,7 @@
 }
 
 .hero {
+    background-color: #000000;
     position: relative;
     max-width: 1920px;
     min-height: 1080px;
@@ -164,6 +176,16 @@
     background-color: rgba(0, 0, 0, 0.35);
     z-index: 0;
     position: absolute;
+}
+
+.hero::after {
+    position: absolute;
+    width: 100%;
+    content: '';
+    height: 365px;
+    left: 0px;
+    bottom: 0px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.19%);
 }
 
 @media screen and (max-width: 1440px) {
@@ -204,8 +226,8 @@
 .hero__content {
     position: relative;
     padding-top: 15%;
+    margin-left: 4%;
     max-width: 1758px;
-    margin: auto;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -294,7 +316,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
-    color: rgba(255, 255, 255, 0.55);
+    color: #FFFFFF8C;
 }
 
 .frame12__description {
@@ -388,4 +410,183 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.content {
+    background-color: #000000;
+    max-width: 1922px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 48px;
+    margin-top: -110px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 528px) {
+    .content {
+        margin-top: 28px;
+    }
+}
+
+.content__see-again {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 28px;
+}
+
+.see-again__text {
+    max-width: 205px;
+    display: flex;
+    justify-content: end;
+}
+
+.see-again__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 114%;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.cards {
+    position: relative;
+    max-width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cards__component {
+    max-width: 311px;
+}
+
+.cards__image {
+    width: 100%;
+}
+
+.see-again__left-next {
+    position: absolute;
+    left: 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    max-width: 149px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 2;
+}
+
+@media screen and (max-width: 568px) {
+    .see-again__left-next {
+        max-width: 49px;
+    }
+}
+
+.arrow {
+    justify-content: flex-start;
+    align-self: flex-start;
+    max-width: 20px;
+    z-index: 2;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@media screen and (max-width: 568px) {
+    .arrow {
+        max-width: 10px;
+    }
+}
+
+.see-again__right-next {
+    position: absolute;
+    right: 0;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    max-width: 149px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 2;
+}
+
+@media screen and (max-width: 568px) {
+    .see-again__right-next {
+        max-width: 49px;
+    }
+}
+
+.arrow-right {
+    justify-content: flex-start;
+    align-self: flex-start;
+    max-width: 20px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 2;
+}
+
+@media screen and (max-width: 568px) {
+    .arrow-right {
+        max-width: 10px;
+    }
+}
+
+.original-series {
+    max-width: 1920px;
+}
+
+.original-series__main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.original-series__text {
+    max-width: 357px;
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (max-width: 568px) {
+    .original-series__text {
+        max-width: 70%;
+    }
+}
+
+.original-series__title {
+    max-width: 276px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 114%;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 568px) {
+    .original-series__title {
+        font-size: 15px;
+        line-height: 130%;
+    }
+    ;
+}
+
+.card__component {
+    max-width: 229px;
+}
+
+.card__image {
+    width: 100%
 }

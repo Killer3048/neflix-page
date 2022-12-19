@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +11,16 @@
     <link rel="stylesheet" href="./vendor/fonts.css">
     <link rel="icon" href="./images/favicon.svg">
 </head>
+
 <body class="page">
     <header class="header">
         <div class="header__frame">
             <nav class="header__frame-logo">
                 <img class="logo" src="./images/Logo.svg">
-                <ul class="header__menu">
-                    <li class="header__link"><a class="header__links" href="#">TV Shows</a></li>
-                    <li class="header__link"><a class="header__links"  href="#">Movies</a></li>
-                    <li class="header__link"><a class="header__links" href="#">My list</a></li>
+                <ul class="header__menu" id="header">
+                    <li class="header__link"><a class="header__links" href="#" id="TV_Shows">TV Shows</a></li>
+                    <li class="header__link"><a class="header__links" href="#" id="Movies">Movies</a></li>
+                    <li class="header__link"><a class="header__links header__links_is-active" id="My_List" href="#">My list</a></li>
                 </ul>
             </nav>
 
@@ -29,8 +31,8 @@
         </div>
     </header>
     <main class="main">
-        <section class="hero">
-            <section class="hero__content">
+        <div class="hero">
+            <div class="hero__content">
                 <div class="hero__frame10">
                     <div class="hero__frame12">
                         <div class="hero__frame9">
@@ -69,9 +71,110 @@
                         </div>
                     </a>
                 </div>
-            </section>
+            </div>
+        </div>
         </section>
-    </section>
+        <section class="content">
+
+            <div class="content__see-again">
+                <div class="see-again__text">
+                    <p class="see-again__title">See Again</p>
+                </div>
+                <div class="cards">
+                    <div class="see-again__left-next">
+                        <a class=" " href='#'>
+                            <img class="arrow" src="./images/arrow.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__component">
+                        <img class="cards__image" src="./images/9DpB6wC1iY5jxLz91RT8tIIsXaf 1.png" alt="">
+                        <div class="cards__progress-line">
+                            <div class="cards__progress-bar">
+
+                            </div>
+                            <div class='cards__progress'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see-again__right-next">
+                        <a class="" type="submit" href="#">
+                            <img class="arrow-right" src="./images/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="original-series">
+                <div class="original-series__main">
+                    <div class="original-series__text">
+                        <p class="original-series__title">Netflix Original Series</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__component">
+                            <img class="card__image" src="./images/17956-SIL22X34IMAGE1 1.png" alt="">
+                            <div class="card__progress-line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -79,4 +182,5 @@
         <script src="./JS/index.js"></script>
     </footer>
 </body>
+
 </html>
