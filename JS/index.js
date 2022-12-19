@@ -17,3 +17,4 @@ document.getElementById("My_List").onclick = function() {
     document.getElementById("TV_Shows").classList.remove("header__links_is-active")
     document.getElementById("Movies").classList.remove("header__links_is-active")
 }
+
