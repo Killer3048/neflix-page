@@ -25,7 +25,7 @@ $(document).ready(function(){
     const sliderItem = $('.cards__component');
     const sliderItemWidth = sliderItem.width();
     const sliderContainerWidth = sliderContainer.width();
-    const sliderTrackWidth = sliderItem.length * sliderItemWidth - sliderContainerWidth + sliderContainerWidth/2; 
+    const sliderTrackWidth = sliderItem.length * sliderItemWidth - sliderContainerWidth + 100; 
     const sliderButtonPrev = $('.arrow');
     const sliderButtonNext = $('.arrow-right');
     sliderButtonPrev.on('click', function(){
