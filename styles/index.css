@@ -500,6 +500,7 @@
     max-width: 20px;
     z-index: 2;
     transform: matrix(-1, 0, 0, 1, 0, 0);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 568px) {
@@ -535,6 +536,7 @@
     max-width: 20px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
     z-index: 2;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 568px) {
