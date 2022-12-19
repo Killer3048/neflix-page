@@ -289,7 +289,12 @@
 .info__year {
     padding: 4px;
     margin: 0;
-    align-self: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .frame12__description {
