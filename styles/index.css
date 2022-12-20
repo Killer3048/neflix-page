@@ -454,9 +454,10 @@
     padding: 0;
     margin: 0;
 }
-.carousel-wrapper{
+
+.carousel-wrapper {
     position: relative;
-    max-width: 100%;
+    max-width: 1920px;
     flex-direction: row;
     display: flex;
     overflow: hidden;
@@ -476,9 +477,9 @@
 
 @media screen and (max-width: 586px) {
     .cards {
-        gap: 6px;}
+        gap: 6px;
+    }
 }
-
 
 .cards__component {
     position: relative;
@@ -489,14 +490,15 @@
 @media screen and (max-width: 586px) {
     .cards__component {
         min-width: 80px;
-        max-height: 175px;}
+        max-height: 175px;
+    }
 }
 
 .cards__image {
     width: 100%;
 }
 
-.cards__progress-line{
+.cards__progress-line {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -504,16 +506,14 @@
     z-index: 3;
 }
 
-
 @media screen and (max-width: 569px) {
-    .cards__progress-line{
+    .cards__progress-line {
         height: 2px;
         bottom: 4px;
     }
 }
 
-
-.cards__progress-bar{
+.cards__progress-bar {
     position: absolute;
     bottom: 0;
     width: 311px;
@@ -524,7 +524,7 @@
 }
 
 @media screen and (max-width: 569px) {
-    .cards__progress-bar{
+    .cards__progress-bar {
         height: 2px;
     }
 }
@@ -642,7 +642,7 @@
     ;
 }
 
-.card{
+.card {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
@@ -650,9 +650,12 @@
 
 .card__component {
     max-width: 229px;
-
 }
 
 .card__image {
     width: 100%
+}
+
+.transition {
+    transition: .5s;
 }

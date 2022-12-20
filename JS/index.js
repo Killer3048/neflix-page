@@ -17,50 +17,45 @@ document.getElementById("My_List").onclick = function() {
     document.getElementById("TV_Shows").classList.remove("header__links_is-active")
     document.getElementById("Movies").classList.remove("header__links_is-active")
 }
+var carousel = $('#carousel'),
+    threshold = 87.5,
+    slideWidth = 311,
+    dragStart,
+    dragEnd;
 
-$(document).ready(function(){
-    let sliderPosition = 0;
-    const sliderContainer = $('.carousel-wrapper');
-    const sliderTrack = $('.cards');
-    const sliderItem = $('.cards__component');
-    const sliderItemWidth = sliderItem.width();
-    const sliderContainerWidth = sliderContainer.width();
-    const sliderTrackWidth = sliderItem.length * sliderItemWidth - sliderContainerWidth + 100; 
-    const sliderButtonPrev = $('.arrow');
-    const sliderButtonNext = $('.arrow-right');
-    sliderButtonPrev.on('click', function(){
-        sliderPosition += sliderItemWidth; 
-        if (sliderPosition > 0) {
-            sliderPosition = 0;
-        }
-        sliderTrack.css('transform', `translateX(${sliderPosition}px`);
-        sliderButtons();
-    });
-    sliderButtonNext.on('click', function(){
-        sliderPosition -= sliderItemWidth;
-        if (sliderPosition < -sliderTrackWidth) {
-            sliderPosition = -sliderTrackWidth;
-        }
-        sliderTrack.css('transform', `translateX(${sliderPosition}px`);
-        sliderButtons();
-    });
-    const sliderButtons = () => {
-        if (sliderPosition == 0) {
-            sliderButtonPrev.hide();
-        } else {
-            sliderButtonPrev.show();
-        }
-        if (sliderPosition == -sliderTrackWidth) {
-            sliderButtonNext.hide();
-        } else {
-            sliderButtonNext.show();
-        }
+$('#next').click(function() { shiftSlide(-1) })
+$('#prev').click(function() { shiftSlide(1) })
 
-     }
-
-    sliderButtons();
+carousel.on('mousedown', function() {
+    if (carousel.hasClass('transition')) return;
+    $(this).on('mousemove', function() {
+        $(this).css('transform', 'translateX(' + dragPos() + 'px)')
+    })
+    $(document).on('mouseup', function() {
+        if (dragPos() > threshold) { return shiftSlide(1) }
+        if (dragPos() < -threshold) { return shiftSlide(-1) }
+        shiftSlide(0);
+    })
 });
 
+function dragPos() {
+    return dragEnd - dragStart;
+}
 
-
-
+function shiftSlide(direction) {
+    if (carousel.hasClass('transition')) return;
+    dragEnd = dragStart;
+    $(document).off('mouseup')
+    carousel.off('mousemove')
+        .addClass('transition')
+        .css('transform', 'translateX(' + (direction * slideWidth) + 'px)');
+    setTimeout(function() {
+        if (direction === 1) {
+            $('.cards__component:first').before($('.cards__component:last'));
+        } else if (direction === -1) {
+            $('.cards__component:last').after($('.cards__component:first'));
+        }
+        carousel.removeClass('transition')
+        carousel.css('transform', 'translateX(0.8%)');
+    }, 700)
+}
