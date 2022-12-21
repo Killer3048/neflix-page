@@ -16,6 +16,10 @@
     overflow: overlay
 }
 
+html{
+    overflov-x: none;
+}
+
 .btn {
     padding: 0;
     border: 0;
